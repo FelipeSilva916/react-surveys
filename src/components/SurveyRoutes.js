@@ -10,9 +10,8 @@ const SurveyRoutes = () => {
   return (
     <BrowserRouter>
       <div>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/sample">Sample</NavLink>
-        <NavLink to="/inventory">Inventory</NavLink>
+        <NavLink to="/">Home</NavLink> | <NavLink to="/sample">Sample</NavLink>{" "}
+        | <NavLink to="/inventory">Inventory</NavLink> |{" "}
         <NavLink to="/report">Report</NavLink>
       </div>
       <Switch>
