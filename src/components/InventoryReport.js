@@ -1,7 +1,7 @@
 import React from "react";
 
 const InventoryReport = () => {
-  return <div></div>;
+  return <div>Inventory Report</div>;
 };
 
 export default InventoryReport;

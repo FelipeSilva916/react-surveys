@@ -1,7 +1,7 @@
 import React from "react";
 
 const SampleSurvey = () => {
-  return <div></div>;
+  return <div>Sample Survey</div>;
 };
 
 export default SampleSurvey;
