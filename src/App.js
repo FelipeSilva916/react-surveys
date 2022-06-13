@@ -1,11 +1,11 @@
 import React from "react";
-import Home from "./components/Home";
+import SurveyRoutes from "./components/SurveyRoutes";
 
 function App() {
   return (
     <>
       <h1>a/A Forms</h1>
-      <Home />
+      <SurveyRoutes />
     </>
   );
 }
