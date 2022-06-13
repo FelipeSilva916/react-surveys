@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Home from "./Home";
 import Inventory from "./Inventory";
@@ -8,6 +9,12 @@ import SampleSurvey from "./SampleSurvey";
 const SurveyRoutes = () => {
   return (
     <BrowserRouter>
+      <div>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/sample">Sample</NavLink>
+        <NavLink to="/inventory">Inventory</NavLink>
+        <NavLink to="/report">Report</NavLink>
+      </div>
       <Switch>
         <Route path="/sample">
           <SampleSurvey />
