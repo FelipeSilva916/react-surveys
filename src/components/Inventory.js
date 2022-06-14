@@ -5,8 +5,13 @@ const Inventory = () => {
   const [value2, setValue2] = useState("");
   const [value3, setValue3] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div>
         <h2>Inventory Assessment</h2>
         <div className="inventory-questions">
