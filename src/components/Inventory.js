@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Inventory = () => {
+  const [value1, setValue1] = useState("");
+  const [value2, setValue2] = useState("");
+  const [value3, setValue3] = useState("");
+
   return (
     <form>
       <div>
@@ -9,7 +13,11 @@ const Inventory = () => {
           <p>
             I learn the most when the lesson engages my sense of <em>sight</em>.
           </p>
-          <select name="q1">
+          <select
+            name="q1"
+            value={value1}
+            onChange={(e) => setValue1(e.target.value)}
+          >
             <Options />
           </select>
         </div>
@@ -18,7 +26,11 @@ const Inventory = () => {
             I learn the most when the lesson engages my sense of{" "}
             <em>hearing</em>.
           </p>
-          <select name="q2">
+          <select
+            name="q2"
+            value={value2}
+            onChange={(e) => setValue2(e.target.value)}
+          >
             <Options />
           </select>
         </div>
@@ -27,7 +39,11 @@ const Inventory = () => {
             I learn the most when the lesson engages my sense of{" "}
             <em>touch, taste,</em> or <em>smell</em>.
           </p>
-          <select name="q3">
+          <select
+            name="q3"
+            value={value3}
+            onChange={(e) => setValue3(e.target.value)}
+          >
             <Options />
           </select>
         </div>
