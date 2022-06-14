@@ -9,20 +9,21 @@ const Inventory = () => {
     <form>
       <div>
         <h2>Inventory Assessment</h2>
-        <div>
-          <p>
+        <div className="inventory-questions">
+          <p className="inventory-prompt">
             I learn the most when the lesson engages my sense of <em>sight</em>.
           </p>
           <select
             name="q1"
             value={value1}
             onChange={(e) => setValue1(e.target.value)}
+            className="inventory-select"
           >
             <Options />
           </select>
         </div>
-        <div>
-          <p>
+        <div className="inventory-questions">
+          <p className="inventory-prompt">
             I learn the most when the lesson engages my sense of{" "}
             <em>hearing</em>.
           </p>
@@ -30,12 +31,13 @@ const Inventory = () => {
             name="q2"
             value={value2}
             onChange={(e) => setValue2(e.target.value)}
+            className="inventory-select"
           >
             <Options />
           </select>
         </div>
-        <div>
-          <p>
+        <div className="inventory-questions">
+          <p className="inventory-prompt">
             I learn the most when the lesson engages my sense of{" "}
             <em>touch, taste,</em> or <em>smell</em>.
           </p>
@@ -43,10 +45,14 @@ const Inventory = () => {
             name="q3"
             value={value3}
             onChange={(e) => setValue3(e.target.value)}
+            className="inventory-select"
           >
             <Options />
           </select>
         </div>
+      </div>
+      <div className="form-button">
+        <button type="submit">Submit</button>
       </div>
     </form>
   );
