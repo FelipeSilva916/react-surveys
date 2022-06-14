@@ -38,14 +38,24 @@ const Inventory = () => {
 
 const Options = () => {
   return [
-    <option value="" disabled>
+    <option key="prompt" value="" disabled>
       Select one...
     </option>,
-    <option value={1}>Strongly Disagree</option>,
-    <option value={2}>Disagree</option>,
-    <option value={3}>Neutral</option>,
-    <option value={4}>Agree</option>,
-    <option value={5}>Strongly Agree</option>
+    <option key="1" value={1}>
+      Strongly Disagree
+    </option>,
+    <option key="2" value={2}>
+      Disagree
+    </option>,
+    <option key="3" value={3}>
+      Neutral
+    </option>,
+    <option key="4" value={4}>
+      Agree
+    </option>,
+    <option key="5" value={5}>
+      Strongly Agree
+    </option>
   ];
 };
 
