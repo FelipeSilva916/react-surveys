@@ -1,6 +1,6 @@
 /* TODO Add site wide styles */
 .form-button {
-  margin: 12px 0;
+  margin: 12px;
   background-color: #eb0e0e;
   border-radius: 2px;
   color: white;
@@ -13,6 +13,8 @@
 .inventory-questions {
   display: flex;
   flex-direction: row;
+  margin-left: 12px;
+  max-width: 700px;
 }
 
 .inventory-prompt {

@@ -52,7 +52,9 @@ const Inventory = () => {
         </div>
       </div>
       <div className="form-button">
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={!value1 || !value2 || !value3}>
+          Submit
+        </button>
       </div>
     </form>
   );
