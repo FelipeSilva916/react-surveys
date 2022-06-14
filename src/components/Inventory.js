@@ -2,25 +2,51 @@ import React from "react";
 
 const Inventory = () => {
   return (
-    <div>
-      <h2>Inventory Assessment</h2>
+    <form>
       <div>
-        <p>
-          I learn the most when the lesson engages my sense of <em>sight</em>.
-        </p>
-        <ul>
-          <li>Strongly Disagree (1 point)</li>
-          <li>Disagree (2 points)</li>
-          <li>Neutral (3 points)</li>
-          <li>Agree (4 points)</li>
-          <li>Strongly Agree (5 points)</li>
-        </ul>
-        <p>
-          I learn the most when the lesson engages my sense of <em>hearing</em>.
-        </p>
+        <h2>Inventory Assessment</h2>
+        <div>
+          <p>
+            I learn the most when the lesson engages my sense of <em>sight</em>.
+          </p>
+          <select name="q1">
+            <Options />
+          </select>
+        </div>
+        <div>
+          <p>
+            I learn the most when the lesson engages my sense of{" "}
+            <em>hearing</em>.
+          </p>
+          <select name="q2">
+            <Options />
+          </select>
+        </div>
+        <div>
+          <p>
+            I learn the most when the lesson engages my sense of{" "}
+            <em>touch, taste,</em> or <em>smell</em>.
+          </p>
+          <select name="q3">
+            <Options />
+          </select>
+        </div>
       </div>
-    </div>
+    </form>
   );
+};
+
+const Options = () => {
+  return [
+    <option value="" disabled>
+      Select one...
+    </option>,
+    <option value={1}>Strongly Disagree</option>,
+    <option value={2}>Disagree</option>,
+    <option value={3}>Neutral</option>,
+    <option value={4}>Agree</option>,
+    <option value={5}>Strongly Agree</option>
+  ];
 };
 
 export default Inventory;
