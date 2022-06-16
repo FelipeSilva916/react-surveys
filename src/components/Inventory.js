@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import { useInventoryContext } from "../context/InventoryProvider";
 
 const Inventory = () => {
+  const { setQValues } = useInventoryContext();
   const [value1, setValue1] = useState("");
   const [value2, setValue2] = useState("");
   const [value3, setValue3] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
+
+    const result = [value1, value2, value3];
+    setQValues(result);
   };
 
   return (

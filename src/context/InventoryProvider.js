@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
-export const InventoryContext = React.createContext({});
+const InventoryContext = React.createContext({});
+export const useInventoryContext = () => {
+  useContext(InventoryContext);
+};
 
 const InventoryProvider = ({ children }) => {
+  //qValues = Questoinnaire values
+  const [qValues, setQValues] = useState([]);
+  useEffect(() => {
+    console.log("qValues", qValues);
+  }, [qValues]);
+
   return (
-    <InventoryContext.Provider value={{}}>
-      {children}{" "}
+    <InventoryContext.Provider
+      value={{
+        qValues: qValues,
+        setQValues: setQValues
+      }}
+    >
+      {children}
     </InventoryContext.Provider>
   );
 };
