@@ -8,6 +8,7 @@ export const useInventoryContext = () => {
 const InventoryProvider = ({ children }) => {
   //qValues = Questoinnaire values
   const [qValues, setQValues] = useState([]);
+
   useEffect(() => {
     console.log("qValues", qValues);
   }, [qValues]);
